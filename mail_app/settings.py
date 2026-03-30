@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "superdeclamatory-claris-prolongably.ngrok-free.dev",
     "francoalberti97.pythonanywhere.com",
+    "alberti-tech.onrender.com"
 ]
 
 
