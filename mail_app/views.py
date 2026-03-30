@@ -25,10 +25,12 @@ def receive_and_send_pdf(request):
         )
 
         email.attach(file.name, file.read(), file.content_type)
+        print(f"Enviando mail a {to} con asunto '{subject}' y archivo '{file.name}'")
 
         email.send()
 
         return JsonResponse({"ok": True})
 
     except Exception as e:
+        print(f"Error al enviar el mail: {e}")
         return JsonResponse({"error": str(e)}, status=500)
